@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:orientation="horizontal">
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    >
     <LinearLayout
         android:padding="3dp"
         android:layout_width="0px"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:layout_weight="8"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center_vertical">
         <!-- ARTISTA
         CANCIÓN
         -->
         <TextView
             android:id="@+id/artista"
-            android:text="DAVID BOWIE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="6dp"></TextView>
+            android:paddingLeft="6dp"
+            android:text="DAVID BOWIE"></TextView>
 
         <TextView
             android:id="@+id/cancion"
@@ -31,7 +33,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="0px"
-        android:layout_height="60dp"
+        android:layout_height="match_parent"
         android:layout_weight="2">
 
         <!-- IMAGEN
@@ -40,7 +42,7 @@
         <ImageView
             android:layout_gravity="center"
             android:id="@+id/icono_detalle"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 

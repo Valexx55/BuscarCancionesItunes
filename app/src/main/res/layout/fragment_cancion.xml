@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal">
+        <TextView
+            android:id="@+id/titulo_cancion"
+            android:text="EL TRACTOR AMARILLO"
+            android:textSize="28sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/artista_cancion"
+            android:text="MANOLO ESCOBAR"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="25"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_gravity="center_vertical|center"
+            android:id="@+id/imagen_disco"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="20"
+        android:orientation="vertical"
+        android:gravity="center|top">
+
+        <ImageView
+            android:id="@+id/play_pause"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ImageView>
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="30000"></SeekBar>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,6 +1,9 @@
 package edu.val.buscarcancionesitunes.modelo;
 
-public class Cancion {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Cancion implements Parcelable {
 
     private long trackId;
     private String artistName;
@@ -21,6 +24,27 @@ public class Cancion {
         this.trackName = trackName;
         this.previewUrl = previewUrl;
     }
+
+    protected Cancion(Parcel in) {
+        trackId = in.readLong();
+        artistName = in.readString();
+        collectionName = in.readString();
+        artworkUrl100 = in.readString();
+        trackName = in.readString();
+        previewUrl = in.readString();
+    }
+
+    public static final Creator<Cancion> CREATOR = new Creator<Cancion>() {
+        @Override
+        public Cancion createFromParcel(Parcel in) {
+            return new Cancion(in);
+        }
+
+        @Override
+        public Cancion[] newArray(int size) {
+            return new Cancion[size];
+        }
+    };
 
     public long getTrackId() {
         return trackId;
@@ -80,5 +104,20 @@ public class Cancion {
                 ", trackName='" + trackName + '\'' +
                 ", previewUrl='" + previewUrl + '\'' +
                 '}';
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeLong(trackId);
+        parcel.writeString(artistName);
+        parcel.writeString(collectionName);
+        parcel.writeString(artworkUrl100);
+        parcel.writeString(trackName);
+        parcel.writeString(previewUrl);
     }
 }

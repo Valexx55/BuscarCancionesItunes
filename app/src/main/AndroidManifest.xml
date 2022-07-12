@@ -3,9 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="edu.val.buscarcancionesitunes">
 
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BuscarCancionesItunes"
         tools:targetApi="31">
+        <activity
+            android:name=".actividades.ListaCancionesActivity"
+            android:exported="false" />
         <activity
             android:name=".actividades.MainActivity"
             android:exported="true">
