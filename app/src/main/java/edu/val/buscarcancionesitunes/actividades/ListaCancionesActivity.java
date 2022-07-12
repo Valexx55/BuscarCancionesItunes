@@ -1,6 +1,7 @@
 package edu.val.buscarcancionesitunes.actividades;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 import edu.val.buscarcancionesitunes.R;
+import edu.val.buscarcancionesitunes.adapter.CancionesViewPagerAdapter;
 import edu.val.buscarcancionesitunes.modelo.Cancion;
 
 /**
@@ -17,6 +19,8 @@ import edu.val.buscarcancionesitunes.modelo.Cancion;
  */
 public class ListaCancionesActivity extends AppCompatActivity {
 
+    private ViewPager2 viewPager2;
+    private CancionesViewPagerAdapter cancionesViewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +31,9 @@ public class ListaCancionesActivity extends AppCompatActivity {
         ArrayList<Cancion> lista_canciones = intent_oringen.getParcelableArrayListExtra("lista_canciones");
         Log.d("ETIQUETA_LOG", "POS = " + posicion);
         Log.d("ETIQUETA_LOG", "lista_canciones = " + lista_canciones);
+
+        this.viewPager2 = findViewById(R.id.viewpager);
+        this.cancionesViewPagerAdapter = new CancionesViewPagerAdapter(this, lista_canciones);
+        this.viewPager2.setAdapter(cancionesViewPagerAdapter);
     }
 }
