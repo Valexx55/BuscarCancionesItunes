@@ -1,4 +1,4 @@
-package edu.val.buscarcancionesitunes;
+package edu.val.buscarcancionesitunes.modelo;
 
 import java.util.List;
 

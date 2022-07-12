@@ -1,4 +1,4 @@
-package edu.val.buscarcancionesitunes;
+package edu.val.buscarcancionesitunes.remoto;
 
 
 //va a ser el programa "ROJO"- AsyncTask
@@ -16,6 +16,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+
+import edu.val.buscarcancionesitunes.modelo.ResultadoBusquedaCanciones;
+import edu.val.buscarcancionesitunes.actividades.MainActivity;
 
 //String - paramétro de entrada
 //VOID - no voy a contabilizar el avance no uso ningún número

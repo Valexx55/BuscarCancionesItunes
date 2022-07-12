@@ -1,4 +1,4 @@
-package edu.val.buscarcancionesitunes;
+package edu.val.buscarcancionesitunes.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
