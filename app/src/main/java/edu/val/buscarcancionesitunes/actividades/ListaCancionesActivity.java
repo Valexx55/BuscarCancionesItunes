@@ -35,5 +35,7 @@ public class ListaCancionesActivity extends AppCompatActivity {
         this.viewPager2 = findViewById(R.id.viewpager);
         this.cancionesViewPagerAdapter = new CancionesViewPagerAdapter(this, lista_canciones);
         this.viewPager2.setAdapter(cancionesViewPagerAdapter);
+        this.viewPager2.setCurrentItem(posicion, true);
+
     }
 }
